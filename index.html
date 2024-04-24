@@ -22,10 +22,14 @@
     <script src="countdown/simplyCountdown.min.js"></script>
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <section
       id="hero"
@@ -157,8 +161,16 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
             <h2>Informasi Acara</h2>
-            <p class="alamat">Regale Convention Center <br> Jl. H. Adam Malik No.66-68, Silalas, Kec. Medan Bar., Kota Medan</p>
-            <a href="https://maps.app.goo.gl/bP8RvReLn4NC6sQt7" target="_blank" class="btn btn-light btn-sm my-3">Click untuk membuka Map</a>
+            <p class="alamat">
+              Regale Convention Center <br />
+              Jl. H. Adam Malik No.66-68, Silalas, Kec. Medan Bar., Kota Medan
+            </p>
+            <a
+              href="https://maps.app.goo.gl/bP8RvReLn4NC6sQt7"
+              target="_blank"
+              class="btn btn-light btn-sm my-3"
+              >Click untuk membuka Map</a
+            >
             <p class="description">Diharapkan tidak salah alamat.</p>
           </div>
         </div>
@@ -166,9 +178,7 @@
         <div class="row justify-content-center mt-4">
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light mb-5">
-              <div class="card-header">
-                Akad Nikah
-              </div>
+              <div class="card-header">Akad Nikah</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
@@ -188,9 +198,7 @@
           </div>
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light">
-              <div class="card-header">
-                Resepsi
-              </div>
+              <div class="card-header">Resepsi</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
@@ -203,13 +211,10 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer">
-                Ditunggu kehadirannya!
-              </div>
+              <div class="card-footer">Ditunggu kehadirannya!</div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -243,6 +248,19 @@
       let multipleElements = document.querySelectorAll(".my-countdown");
       simplyCountdown(multipleElements, {
         /* options */
+      });
+    </script>
+
+    <script>
+      const stickyTop = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
+
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
+
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
       });
     </script>
   </body>
